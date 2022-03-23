@@ -1,5 +1,4 @@
-import logo from './logo.svg';
-
+import { useEffect, useState } from "react";
 //nav
 import { Routes, Route, Link, Router } from "react-router-dom";
 
@@ -13,9 +12,20 @@ import Blog from './pages/Blog';
 import NavBars from './navigation/NavBars';
 //styles
 import './App.css';
+//api
+import api from "./services/api";
 
 
 function App() {
+  const [data, setData] = useState([])
+  // call to API
+  useEffect(() => {
+    api().then((initialData) => {
+      console.log(initialData);
+      setData(initialData);
+    });
+  }, []);
+
   return (
     <>
       <NavBars />
