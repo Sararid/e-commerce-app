@@ -1,15 +1,21 @@
-import React from 'react'
-import { useSelector, useDispatch } from 'react-redux'
-import { decrement, increment } from '../redux/features/counter/counterSlice'
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { getProducts } from '../redux/features/Product/productSlice';
+
 export default function Home() {
-    const count = useSelector((state) => state.counter.value)
+    const { products, loading } = useSelector((state) => state.products)
+
     const dispatch = useDispatch()
+    useEffect(() => {
+        dispatch(getProducts())
+
+    }, [])
+
     return (
         <div>Home
-            <button onClick={() => dispatch(increment())}>
-                increment
-            </button>
-            <span>{count}</span>
+            {products.map((item) =>
+                <h2>{item.id}</h2>
+            )}
         </div>
     )
 }
