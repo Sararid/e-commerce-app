@@ -1,8 +1,4 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
-import api from '../../../services/api'
-
-
-
+import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
     products: [],
@@ -56,7 +52,7 @@ export function getProducts() {
         try {
             const response = await fetch('https://fakestoreapi.com/products')
             const data = await response.json()
-
+            console.log(data)
             dispatch(getProductSuccess(data))
         } catch (error) {
             dispatch(getProductRejected())

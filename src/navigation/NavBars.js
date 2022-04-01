@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import './NavBar.scss'
 import { NavLink } from 'react-router-dom'
-import { FiShoppingCart } from 'react-icons/fi';
 import { AiOutlineHome, AiOutlineShoppingCart, AiOutlineClose, AiOutlineShopping } from 'react-icons/ai';
 import { GiHamburgerMenu } from 'react-icons/gi';
 
@@ -22,10 +21,11 @@ export default function NavBar() {
                 <h2>Shop Now</h2>
 
                 <nav className='header__nav'>
-                    <GiHamburgerMenu className="header__nav--icon" onClick={handleNavBar} />
-                    <NavLink to="/" className="header__nav--icon" ><AiOutlineHome /></NavLink>
-                    <NavLink to="/Shop" className="header__nav--icon" ><AiOutlineShopping /></NavLink>
-                    <NavLink to="/Cart" className="header__nav--icon" ><AiOutlineShoppingCart /></NavLink>
+                    <GiHamburgerMenu className="header__nav--icon icons" onClick={handleNavBar} />
+
+                    <NavLink to="/" className="header__nav--icon" ><AiOutlineHome className="icons" /></NavLink>
+                    <NavLink to="/Shop" className="header__nav--icon" ><AiOutlineShopping className="icons" /></NavLink>
+                    <NavLink to="/Cart" className="header__nav--icon" ><AiOutlineShoppingCart className="icons" /></NavLink>
 
 
 
@@ -37,7 +37,7 @@ export default function NavBar() {
                         <NavLink to="/Cart">Cart</NavLink>
                         <NavLink to="/Contact">Contact</NavLink>
                         <NavLink to="/Blog">Blog</NavLink>
-                    </div> <div className='navContainer__closeIcon'> <AiOutlineClose onClick={() => setHidden('hidden')} />
+                    </div> <div className='navContainer__closeIcon'> <AiOutlineClose className="icons" onClick={() => setHidden('hidden')} />
                     </div>    </div>
             </header>
         </>)

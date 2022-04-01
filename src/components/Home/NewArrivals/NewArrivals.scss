@@ -1,0 +1,26 @@
+.newArrival {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__description {
+    text-align: center;
+  }
+  &__list {
+    margin: 0;
+    padding: 0;
+    &--items {
+      margin: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: gainsboro;
+    }
+    &--title {
+      text-align: center;
+    }
+    &--icon {
+      display: flex;
+      align-items: center;
+    }
+  }
+}

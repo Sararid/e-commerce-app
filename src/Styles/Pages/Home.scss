@@ -1,4 +1,18 @@
 .main {
-  border: 2px solid red;
-  height: 50vh;
+  height: 70vh;
+  &__containers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+    background-color: yellow;
+    &--title {
+      font-size: 1.3em;
+      font-weight: 700;
+    }
+    &--description {
+      text-align: center;
+      padding-top: 1rem;
+    }
+  }
 }
