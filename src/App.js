@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 //nav
-import { Routes, Route, Link, Router } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 //pages
 import Home from './pages/Home';
@@ -11,20 +11,12 @@ import Blog from './pages/Blog';
 //nav
 import NavBars from './navigation/NavBars';
 //styles
-import './App.css';
-//api
-import api from "./services/api";
-
+import './Styles/App.scss'
+import Cart from "./pages/Cart";
 
 function App() {
-  const [data, setData] = useState([])
-  // call to API
-  useEffect(() => {
-    api().then((initialData) => {
-      console.log(initialData);
-      setData(initialData);
-    });
-  }, []);
+
+
 
   return (
     <>
@@ -32,6 +24,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="Shop" element={<Shop />} />
+        <Route path="Cart" element={<Cart />} />
         <Route path="Collection" element={<Collection />} />
         <Route path="Contact" element={<ContactUs />} />
         <Route path="Blog" element={<Blog />} />
