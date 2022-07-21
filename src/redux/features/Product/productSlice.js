@@ -20,7 +20,6 @@ export const productSlice = createSlice({
                 state.errors = false
                 state.products = action.payload
 
-
             },
         getProductRejected:
             (state) => {

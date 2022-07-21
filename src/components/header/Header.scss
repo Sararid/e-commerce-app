@@ -1,0 +1,83 @@
+@import "../../utils/Mixins.scss";
+
+.header {
+  // margin: 2rem;
+  // height: 100px;
+  font-family: inherit;
+
+  &__container {
+    @include flexRowCenter;
+    justify-content: space-around;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    height: 50px;
+    background-color: aquamarine;
+    @media all and (min-width: 768px) {
+      height: 200px;
+    }
+  }
+  &__nav {
+    margin-top: 2rem;
+    padding: 0;
+    @include flexRowCenter;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    list-style: none;
+    &--link {
+      list-style: none;
+      text-decoration: none;
+      color: $black;
+      font-weight: bold;
+      font-size: 1em;
+
+      @media all and (min-width: 768px) {
+        padding-left: 2rem;
+      }
+    }
+    &--link:hover {
+      cursor: pointer;
+      color: $orange;
+    }
+    &--logo {
+      list-style: none;
+      text-decoration: none;
+      color: $black;
+      font-weight: bold;
+      width: 200px;
+      @media all and (min-width: 768px) {
+        font-size: 2.5rem;
+      }
+    }
+    li {
+      @media all and (min-width: 768px) {
+        padding-left: 2rem;
+      }
+    }
+    @media all and (min-width: 768px) {
+      font-size: 1.5rem;
+    }
+  }
+  &__icon {
+    position: relative;
+    font-size: 1.2em;
+    &--count {
+      font-size: 0.9em;
+    }
+  }
+  &__icon:hover {
+    cursor: pointer;
+    color: $orange;
+  }
+}
+
+.logo {
+  //  @include flexColumnCenter;
+
+  &__img {
+    width: 100px;
+    @media all and (min-width: 768px) {
+      width: 250px;
+    }
+  }
+}
