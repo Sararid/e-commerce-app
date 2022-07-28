@@ -1,5 +1,5 @@
-import { createSlice } from '@reduxjs/toolkit'
-
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
+import axios from 'axios'
 const initialState = {
     products: [],
     loading: false,
@@ -19,7 +19,7 @@ export const productSlice = createSlice({
                 state.loading = false
                 state.errors = false
                 state.products = action.payload
-
+                console.log(action.payload)
             },
         getProductRejected:
             (state) => {
@@ -38,16 +38,11 @@ export default productSlice.reducer
 
 export const productsSelector = state => state.products
 
-// export const getProducts = createAsyncThunk('product/getProducts', async () => {
-//     const response = await fetch('https://fakestoreapi.com/products').then((data) => data.json())
-//     return response
-// })
 
 // Asynchronous thunk action
 export function getProducts() {
     return async dispatch => {
         dispatch(getProduct())
-
         try {
             const response = await fetch('https://fakestoreapi.com/products')
             const data = await response.json()

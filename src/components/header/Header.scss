@@ -12,9 +12,10 @@
     width: 100%;
     z-index: 1;
     height: 50px;
-    background-color: aquamarine;
+    background-color: white;
+    opacity: 1;
     @media all and (min-width: 768px) {
-      height: 200px;
+      height: 100px;
     }
   }
   &__nav {
@@ -61,9 +62,6 @@
   &__icon {
     position: relative;
     font-size: 1.2em;
-    &--count {
-      font-size: 0.9em;
-    }
   }
   &__icon:hover {
     cursor: pointer;

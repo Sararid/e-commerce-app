@@ -18,7 +18,8 @@ const api = () => {
                         }
 
                     });
-                return result
+                return result,
+                    console.log(result)
             })
             .catch(error => { console.log('err', error) })
 

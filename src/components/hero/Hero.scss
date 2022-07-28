@@ -1,0 +1,24 @@
+.hero {
+  background-color: blueviolet;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px;
+  &__section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: navajowhite;
+
+    margin: 20px;
+    &--mid {
+    }
+  }
+  &__title {
+  }
+  &__subtitle {
+  }
+  &__button {
+  }
+}

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { BsCart2 } from "react-icons/bs";
 import { FiMenu } from "react-icons/fi";
 import MenuNav from '../menuNav/MenuNav';
+import Cart from '../cart/Cart';
 export default function Header() {
     //  const [widthButton, setWidthButton] = useState('100vw')
     const { sideBar, setSideBar } = useState('0vw')
@@ -26,14 +27,10 @@ export default function Header() {
                     </div>
                     <MenuNav width={sideBar} />
                 </div>
-
-                <>RANDA</>
-                <div className="logo">
-                    {/* <Link to="/" className="header__nav--logo">
-                        RANDA
-                    </Link> */}
+                <div>RANDA</div>
+                <div>
+                    <Cart />
                 </div>
-                <BsCart2 className="header__icon" />
 
                 {/*  <Link to="/cart" className="header__nav--link">
                     <BsCart2 className="header__icon" />

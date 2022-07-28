@@ -1,0 +1,79 @@
+@import "../../utils/Mixins.scss";
+.singleProduct {
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px $GrayishBlue;
+
+  padding: 1rem 0;
+
+  margin: 2.5rem;
+  @include flexColumnCenter;
+
+  &__card {
+    width: 100%;
+    max-width: 20rem;
+    @include flexColumnCenter;
+    @media all and (min-width: 768px) {
+      width: 10rem;
+      align-content: space-around;
+    }
+  }
+  &__title {
+    font-size: 0.5rem;
+    text-align: center;
+  }
+  &__subcard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+  }
+  &__image {
+    // width: 200px;
+    height: 290px;
+    @media all and (min-width: 423px) {
+      width: 210px;
+      height: 280px;
+    }
+    @media all and(min-width: 500px) {
+      height: 250px;
+    }
+  }
+  &__title {
+    padding-top: 1rem;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+  &__container {
+    padding: 0;
+    @include flexColumnWrap;
+    align-items: center;
+    justify-content: space-around;
+  }
+  &__subtitle {
+    color: $orange;
+    padding: 0 2rem;
+  }
+  &__price {
+    font-weight: bold;
+  }
+
+  &__description {
+    color: $darkBlue;
+    padding: 0 2rem;
+    text-align: center;
+  }
+  &__category {
+    color: $orange;
+  }
+  &__card {
+    padding: 1rem;
+    @media all and (min-width: 768px) {
+      width: 16rem;
+    }
+  }
+  &__btn {
+    @include buttonStyle;
+    margin: 0.5rem 0;
+    margin-right: 3px;
+  }
+}

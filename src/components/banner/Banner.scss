@@ -3,11 +3,13 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  background-image: url("../../../assets/images/hero.jpg");
+  background-image: url("'../../../../images/hero.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-
   height: 50vh;
+  @media all and (min-width: 768px) {
+    height: 80vh;
+  }
 
   &__item {
     background-color: "azure";
