@@ -3,7 +3,7 @@ import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { getProducts } from '../../redux/features/Product/productSlice'
 import ProductCard from '../product/ProductCard'
-import { addToCart, increament } from '../../redux/features/cart/cartSlice'
+import { addToCart, } from '../../redux/features/cart/cartSlice'
 //style
 import './FeaturedProducts.scss'
 
@@ -16,14 +16,14 @@ export default function FeaturedProducts() {
     const productList = stateProducts
         .filter((item, i) => i < 4)
         .map((item, index) =>
-            <>
-                <ProductCard
-                    item={item}
+            //   <ul style={{ display: 'flex', flexDirection: 'column' }}>
+            <ProductCard
+                item={item}
 
 
-                />
+            />
 
-            </>
+            //     </ul>
 
         )
 
@@ -32,10 +32,13 @@ export default function FeaturedProducts() {
         dispatch(getProducts())
     }, [dispatch])
     return (
-        <div className='featuredCollection'>
+        <section className='featuredCollection'>
             <h1>Featured Collection</h1>
-            {productList}
+            <div style={{ display: 'flex' }}> <ul className='featuredCollection__list'>
+                {productList}
+            </ul> </div>
 
-        </div>
+
+        </section>
     )
 }

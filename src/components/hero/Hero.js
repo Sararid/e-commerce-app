@@ -1,4 +1,6 @@
 import React from 'react'
+//style
+import './Hero.scss';
 
 export default function Hero() {
     return (

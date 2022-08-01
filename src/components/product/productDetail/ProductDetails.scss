@@ -1,0 +1,14 @@
+.productDetails {
+  display: flex;
+  padding: 10rem;
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+  &__card {
+  }
+  &__image {
+  }
+  &__subcard {
+  }
+}

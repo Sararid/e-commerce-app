@@ -11,46 +11,53 @@ import { useParams } from "react-router";
 //style
 import './ProductDetails.scss';
 
+//store
+import { useSelector, useDispatch } from 'react-redux';
+import { increment } from "../../../redux/features/cart/cartSlice";
 const ProductDetails = () => {
     const { productId } = useParams();
     console.log(productId)
+    const dispatch = useDispatch();
+
+
     // const { data } = useContext(ProductsContext);
-    // const [product, setProduct] = useState([]);
-    // const { addProduct, cartItems, increase } = useContext(CartContext);
+    const [product, setProduct] = useState([]);
 
-    // const fetchProductDetails = async () => {
-    //     const response = await axios
-    //         .get(`https://fakestoreapi.com/products/${productId}`)
-    //         .catch((err) => {
-    //             console.log("err", err);
-    //         });
-    //     setProduct(response.data);
-    // };
+    const fetchProductDetails = async () => {
+        const response = await axios
+            .get(`https://fakestoreapi.com/products/${productId}`)
+            .catch((err) => {
+                console.log("err", err);
+            });
+        setProduct(response.data);
+    };
 
-    // useEffect(() => {
-    //     if (productId && productId !== "") fetchProductDetails();
+    console.log(product)
+    useEffect(() => {
+        if (productId && productId !== "") fetchProductDetails();
 
-    // }, [productId]);
+    }, [productId]);
 
-    // const { id, title, price, category, image, description } = product;
+    const { id, title, price, category, image, description } = product;
     return (
-        <div className="singleProduct__container">
-            {/* {Object.keys(product).length === 0 ? (
+        <div className="productDetails">
+            {Object.keys(product).length === 0 ? (
                 <Spinner animation="border" />
             ) : (
-                <li key={id} id={id} className="singleProduct">
-                    <div className="singleProduct__card">
-                        <img className="singleProduct__image" src={image} alt={title} />
+                <li key={id} id={id} className="productDetails__container">
+                    <div className="productDetails__card">
+                        <img className="productDetails__image" src={image} alt={title} width={"200px"} height={'200px'} />
                     </div>
-                    <div className="singleProduct__subcard">
-                        <h1 className="singleProduct__title">{title}</h1>
-                        <span className="singleProduct__subtitle"> {category} </span>
-                        <span className="singleProduct__price"> € {price}</span>
-                        <p className="singleProduct__description"> {description}</p>
-                        <p>{data.description} </p>
-                        {!isInCart(product, cartItems) && (
+                    <div className="productDetails__subcard">
+                        <h1 className="productDetails__title">{title}</h1>
+                        <span className="productDetails__subtitle"> {category} </span>
+                        <span className="productDetails__price"> € {price}</span>
+                        <p className="productDetails__description"> {description}</p>
+                        <p>{description} </p>
+                        <button onClick={() => { dispatch(increment(product)) }}>addd</button>
+                        {/* {!isInCart(product, cartItems) && (
                             <button
-                                className="singleProduct__btn"
+                                className="productDetails__btn"
                                 onClick={() => addProduct(product)}
                             >
                                 Add to cart
@@ -59,20 +66,19 @@ const ProductDetails = () => {
                         {isInCart(product, cartItems) && (
 
                             <button
-                                className="singleProduct__btn"
+                                className="productDetails__btn"
                                 onClick={() => increase(product)}
                             >
                                 Add more
                             </button>
-                        )}
-                        <Link to="/cart">
-                            {" "}
-                            <button className="singleProduct__btn">Go to Cart</button>
-                        </Link>
+                        )} */}
+                        {/* <Link to="/cart">
+                            <button className="productDetails__btn">Go to Cart</button>
+                        </Link> */}
                     </div>
                 </li>
-            )} */}
-            hola
+            )}
+
         </div>
     );
 };

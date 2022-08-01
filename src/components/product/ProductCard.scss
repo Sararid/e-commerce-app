@@ -2,7 +2,7 @@
 .singleProduct {
   border: 1px solid #ccc;
   box-shadow: 1px 1px $GrayishBlue;
-
+  min-width: 18rem;
   padding: 1rem 0;
 
   margin: 2.5rem;
@@ -10,8 +10,8 @@
 
   &__card {
     width: 100%;
-    max-width: 20rem;
-    @include flexColumnCenter;
+    min-width: 18rem;
+    /// @include flexColumnCenter;
     @media all and (min-width: 768px) {
       width: 10rem;
       align-content: space-around;
@@ -45,9 +45,12 @@
   }
   &__container {
     padding: 0;
-    @include flexColumnWrap;
-    align-items: center;
-    justify-content: space-around;
+    // @include flexColumnWrap;
+    // align-items: center;
+    // justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
   }
   &__subtitle {
     color: $orange;

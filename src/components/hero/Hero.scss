@@ -1,10 +1,15 @@
 .hero {
-  background-color: blueviolet;
+  background-color: burlywood;
+  background-image: url("../../images/model\ \(3\).jpg");
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 45vh;
   display: flex;
-  align-items: center;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 30px;
+  align-items: center;
+  justify-content: space-around;
   &__section {
     display: flex;
     justify-content: space-between;
@@ -20,5 +25,11 @@
   &__subtitle {
   }
   &__button {
+    color: #000;
+    width: 130px;
+    background: #e6e6e8;
+    border-radius: 4rem;
+    box-shadow: 0 0 13px 2px #e6e6e8;
+    transition: box-shadow 0.2s linear;
   }
 }

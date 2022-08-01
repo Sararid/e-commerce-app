@@ -8,33 +8,32 @@ import { addToCart, increament } from '../../redux/features/cart/cartSlice';
 export default function ProductCard({ item, onClick }) {
     const dispatch = useDispatch()
     const cart = useSelector((state) => state.cart);
-
+    console.log(item.id)
     return (
-        <ul key={item.id} className="singleProduct__container">
-            <li key={item.id} id={item.id} className="singleProduct">
-                <div className="singleProduct__card">
-                    <img src={item.image} alt={item.title} className="singleProduct__image" />
+        <li key={item.id} id={item.id} className="singleProduct">
 
-                    <h1 className="singleProduct__title">{item.title}</h1>
-                    {/* <span className="singleProduct__category"> {category}</span> */}
+            <img src={item.image} alt={item.title} className="singleProduct__image" />
 
-                    <span className="singleProduct__price">€ {item.price}</span>
+            <h1 className="singleProduct__title">{item.title}</h1>
+            {/* <span className="singleProduct__category"> {category}</span> */}
 
-
-                    <Link to={`/product/${item.id}`}>
-                        <button className="singleProduct__btn">View item</button>
-                    </Link>
-                    <button
-                        className="singleProduct__btn"
-                        onClick={() => {
-                            dispatch(addToCart(item))
-                        }}
-                    >
-                        Add to cart
-                    </button>
+            <span className="singleProduct__price">€ {item.price}</span>
 
 
-                    {/* {cart.cartItems.length < 0(
+            <Link to={`/product/${item.id}`}>
+                <button className="singleProduct__btn">View item</button>
+            </Link>
+            <button
+                className="singleProduct__btn"
+                onClick={() => {
+                    dispatch(addToCart(item))
+                }}
+            >
+                Add to cart
+            </button>
+
+
+            {/* {cart.cartItems.length < 0(
                         <button
                             className="singleProduct__btn"
                             onClick={() => addToCart(item)}
@@ -46,8 +45,7 @@ export default function ProductCard({ item, onClick }) {
                         <button className="singleProduct__btn">Add more</button>
                     )} */}
 
-                </div>
-            </li>
-        </ul>
+        </li>
+
     )
 }
