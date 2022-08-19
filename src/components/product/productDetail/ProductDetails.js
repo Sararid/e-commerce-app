@@ -3,24 +3,19 @@ import { Spinner } from "react-bootstrap";
 //context
 
 import axios from "axios";
-//icon
-import { isInCart } from "../../cart/Cart";
 //router
-import { Link } from "react-router-dom";
 import { useParams } from "react-router";
 //style
-import './ProductDetails.scss';
+import "./ProductDetails.scss";
 
 //store
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from "react-redux";
 import { increment } from "../../../redux/features/cart/cartSlice";
 const ProductDetails = () => {
     const { productId } = useParams();
-    console.log(productId)
+    console.log(productId);
     const dispatch = useDispatch();
 
-
-    // const { data } = useContext(ProductsContext);
     const [product, setProduct] = useState([]);
 
     const fetchProductDetails = async () => {
@@ -32,10 +27,8 @@ const ProductDetails = () => {
         setProduct(response.data);
     };
 
-    console.log(product)
     useEffect(() => {
         if (productId && productId !== "") fetchProductDetails();
-
     }, [productId]);
 
     const { id, title, price, category, image, description } = product;
@@ -45,17 +38,27 @@ const ProductDetails = () => {
                 <Spinner animation="border" />
             ) : (
                 <li key={id} id={id} className="productDetails__container">
-                    <div className="productDetails__card">
-                        <img className="productDetails__image" src={image} alt={title} width={"200px"} height={'200px'} />
-                    </div>
-                    <div className="productDetails__subcard">
-                        <h1 className="productDetails__title">{title}</h1>
-                        <span className="productDetails__subtitle"> {category} </span>
-                        <span className="productDetails__price"> € {price}</span>
-                        <p className="productDetails__description"> {description}</p>
-                        <p>{description} </p>
-                        <button onClick={() => { dispatch(increment(product)) }}>addd</button>
-                        {/* {!isInCart(product, cartItems) && (
+                    <img
+                        className="productDetails__image"
+                        src={image}
+                        alt={title}
+                    />
+
+
+                    <h1 className="productDetails__title">{title}</h1>
+
+
+                    <p className="productDetails__description"> {description}</p>
+                    <span className="productDetails__price"> € {price}</span>
+
+                    <button className="productDetails__button"
+                        onClick={() => {
+                            dispatch(increment(product));
+                        }}
+                    >
+                        Add
+                    </button>
+                    {/* {!isInCart(product, cartItems) && (
                             <button
                                 className="productDetails__btn"
                                 onClick={() => addProduct(product)}
@@ -72,13 +75,12 @@ const ProductDetails = () => {
                                 Add more
                             </button>
                         )} */}
-                        {/* <Link to="/cart">
+                    {/* <Link to="/cart">
                             <button className="productDetails__btn">Go to Cart</button>
                         </Link> */}
-                    </div>
+
                 </li>
             )}
-
         </div>
     );
 };

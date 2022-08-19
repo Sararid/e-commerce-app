@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { BsCart2 } from "react-icons/bs";
 import { FiMenu } from "react-icons/fi";
 import MenuNav from '../menuNav/MenuNav';
-import Cart from '../cart/Cart';
+import Cart from '../cart/cartCounter/CartCounter';
 export default function Header() {
     //  const [widthButton, setWidthButton] = useState('100vw')
     const { sideBar, setSideBar } = useState('0vw')
@@ -27,7 +27,7 @@ export default function Header() {
                     </div>
                     <MenuNav width={sideBar} />
                 </div>
-                <div>RANDA</div>
+                <Link to='/'> <div>RANDA</div></Link>
                 <div>
                     <Cart />
                 </div>

@@ -8,7 +8,7 @@ import { addToCart, increament } from '../../redux/features/cart/cartSlice';
 export default function ProductCard({ item, onClick }) {
     const dispatch = useDispatch()
     const cart = useSelector((state) => state.cart);
-    console.log(item.id)
+
     return (
         <li key={item.id} id={item.id} className="singleProduct">
 

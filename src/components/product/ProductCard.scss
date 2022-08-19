@@ -4,6 +4,7 @@
   box-shadow: 1px 1px $GrayishBlue;
   min-width: 18rem;
   padding: 1rem 0;
+  max-width: 322px;
 
   margin: 2.5rem;
   @include flexColumnCenter;

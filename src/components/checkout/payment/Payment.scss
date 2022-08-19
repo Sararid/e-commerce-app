@@ -1,0 +1,121 @@
+@import "../../../utils/Mixins.scss";
+
+.containerPay {
+  margin-top: 2rem;
+  @include flexColumnCenter;
+  @media all and (min-width: 768px) {
+    margin-top: 0;
+  }
+
+  &__form {
+    @include flexColumnCenter;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    width: 100vw;
+    @media all and (min-width: 768px) {
+      width: 100%;
+    }
+  }
+
+  &__name {
+    @include flexColumnCenter;
+    width: 100%;
+    label {
+      font-weight: bold;
+      padding-bottom: 1rem;
+    }
+
+    @media all and (min-width: 768px) {
+      margin: 2rem 0;
+    }
+    button {
+      margin-top: 1rem;
+      @include buttonStyle;
+      width: 70%;
+      @media all and (max-width: 340px) {
+        height: 50px;
+        width: 75%;
+      }
+      a {
+        text-decoration: none;
+        color: white;
+      }
+    }
+  }
+
+  &__date {
+    display: flex;
+    align-items: center;
+    width: 70%;
+  }
+
+  &__country {
+    width: 100%;
+    @include flexColumnCenter;
+    margin: 2rem 0;
+    align-items: center;
+  }
+  &__btn {
+    width: 70%;
+
+    button {
+      @include buttonStyle;
+      width: 100%;
+      margin: 0;
+    }
+    span {
+      text-align: center;
+      padding: 0.3rem 0;
+    }
+  }
+}
+
+input {
+  width: 70%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px $GrayishBlue;
+  border-radius: 3px;
+}
+input::placeholder {
+  padding-left: 4px;
+}
+label {
+  font-weight: bold;
+  padding: 10px 0;
+}
+.input_country {
+  width: 70%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px $GrayishBlue;
+  border-radius: 3px;
+}
+
+.paywithcard {
+  display: flex;
+  h1 {
+    font-size: 2rem;
+  }
+  &__txt {
+    color: black;
+    background-color: white;
+    text-align: center;
+    width: 70%;
+
+    font-weight: bold;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    margin: 1rem 1rem;
+
+    border-radius: 5px;
+  }
+}
+
+span {
+  text-align: center;
+  padding: 0.3rem 0;
+}

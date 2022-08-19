@@ -3,7 +3,6 @@ import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { getProducts } from '../../redux/features/Product/productSlice'
 import ProductCard from '../product/ProductCard'
-import { addToCart, } from '../../redux/features/cart/cartSlice'
 //style
 import './FeaturedProducts.scss'
 
