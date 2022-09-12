@@ -1,11 +1,10 @@
-import React from 'react'
-import CartPage from '../components/cart/cartPage/CartPage'
-import Hero from '../components/hero/Hero'
+import React from "react";
+//component
+import CartPage from "../components/cart/cartPage/CartPage";
 export default function Cart() {
-    return (
-        <>
-            <CartPage />
-        </>
-    )
+  return (
+    <>
+      <CartPage />
+    </>
+  );
 }
-

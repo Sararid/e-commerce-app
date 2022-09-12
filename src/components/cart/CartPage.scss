@@ -1,5 +1,5 @@
-@import "../../../utils/Mixins.scss";
-@import "../../../utils/Variables.scss";
+@import "../../utils/Mixins.scss";
+@import "../../utils/Variables.scss";
 .cart {
   @include flexColumnCenter;
   @media all and(min-width: 768px) {
@@ -33,12 +33,12 @@
       border: solid 0.5px #b6bcc8;
       box-shadow: 2px 2px $GrayishBlue;
       border-radius: 20px;
-
       padding: 1rem 1rem;
-      max-width: 189px;
+      max-width: 15rem;
       margin: 1rem 0;
       @media all and (min-width: 465px) {
         margin: 1rem;
+        max-width: 25rem;
       }
       @media all and (min-width: 768px) {
         margin: 1rem 2rem;
@@ -60,7 +60,7 @@
     &--title {
       display: flex;
       flex-direction: column;
-      margin-right: 3rem;
+ padding-bottom: 1rem;
 
       h3,
       p {
@@ -93,8 +93,8 @@
       @include flexColumnCenter;
 
       h3 {
-        font-size: 1rem;
         text-align: center;
+        padding-bottom: 1rem;
         @media all and (min-width: 768px) {
           font-size: 1rem;
         }
@@ -102,7 +102,6 @@
       button {
         width: 30px;
         border: none;
-
         background-color: transparent;
         border-radius: 3px;
         cursor: pointer;

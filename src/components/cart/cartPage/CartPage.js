@@ -1,32 +1,23 @@
-import React, { useContext } from "react";
+import React from "react";
+//icon
 import { AiOutlineArrowLeft } from "react-icons/ai";
-import "./CartPage.scss";
+//style
+import "../../cart/CartPage.scss";
+//route
 import { Link } from "react-router-dom";
 //store
-import { useSelector, useDispatch } from 'react-redux';
-import { increment, decrement, addToCart, clear } from "../../../redux/features/cart/cartSlice";
+import { useSelector } from 'react-redux';
+//component
 import CartItem from '../cartItem/CartItem'
 import CartTotal from "../cartTotal/CartTotal";
-export default function CartPage() {
-    const dispatch = useDispatch()
-    // const {
-    //     cartItems,
-    //     itemCount,
-    //     total,
-    //     increase,
-    //     decrease,
-    //     removeProduct,
-    //     clearCart,
-    // } = useContext(CartContext);
 
-    // const addRemove = { increase, decrease, removeProduct };
+export default function CartPage() {
     const cart = useSelector((state) => state.cart);
-    console.log(cart)
+    console.log('cartpage', cart.cartItems)
     return (
         <section >
             <div className="cart__title">
                 <Link to="/shop">
-
                     <button className="cart__btn">
                         <AiOutlineArrowLeft />
                         Back to Shop

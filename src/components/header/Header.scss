@@ -9,11 +9,13 @@
     @include flexRowCenter;
     justify-content: space-around;
     position: fixed;
-    width: 100%;
+    width: 100vw;
     z-index: 1;
     height: 60px;
     background-color: white;
     opacity: 1;
+    padding: 1rem;
+    padding-top: 1.5rem;
     @media all and (min-width: 768px) {
       height: 100px;
     }

@@ -8,7 +8,11 @@ import { increment, decrement, addToCart, clear } from "../../../redux/features/
 
 export default function CartItem({ item }) {
     const dispatch = useDispatch()
-    console.log(item)
+    console.log('cartitem page', item)
+//     localStorage.setItem("cart product",item)
+//     const saved = localStorage.getItem("name");
+//   const initialValue = JSON.parse(saved);
+//   console.log(initialValue)
     return (
         <>
             <div className="cart__container--card">

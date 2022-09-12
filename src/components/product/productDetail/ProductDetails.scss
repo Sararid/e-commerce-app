@@ -2,17 +2,13 @@
 
 .productDetails {
   display: flex;
-  padding: 10rem;
-
+  padding-top: 2rem;
   &__container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flexColumnCenter;
     border: 1px solid #ccc;
     box-shadow: 1px 1px $GrayishBlue;
     padding: 2rem;
   }
-
   &__image {
     width: 200px;
     height: 220px;
@@ -33,5 +29,11 @@
   }
   &__button {
     @include buttonStyle;
+  }
+  &__button:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    border: 1px black solid;
   }
 }
