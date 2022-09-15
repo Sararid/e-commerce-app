@@ -16,11 +16,16 @@ export default function FeaturedProducts() {
   useEffect(() => {
     dispatch(getProducts());
   }, [dispatch]);
+  console.log('productlist', productList)
   return (
     <section className="featuredCollection">
       <h1>Featured Collection</h1>
       <div style={{ display: "flex" }}>
-        <ul className="featuredCollection__list">{productList}</ul>{" "}
+        { productList.length < 0 ? 
+        <div style={{width: 100, height: 300, backgroundColor: 'red'}}>text loading</div> :
+           <ul className="featuredCollection__list">{productList}</ul>
+        }
+       
       </div>
     </section>
   );

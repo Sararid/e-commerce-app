@@ -31,3 +31,8 @@
   letter-spacing: 4px;
   transition: 0.4s;
 }
+
+@mixin listStyle {
+  list-style: none;
+  text-decoration: none;
+}

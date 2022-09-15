@@ -2,9 +2,7 @@
 
 .header {
   padding-bottom: 1.4rem;
-  // height: 100px;
   font-family: inherit;
-
   &__container {
     @include flexRowCenter;
     justify-content: space-around;
@@ -20,6 +18,30 @@
       height: 100px;
     }
   }
+  &__toggleNav {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    justify-content: space-between;
+    align-items: flex-start;
+   z-index: 9999;
+    background-color: black;
+    color: white;
+    padding: 2rem;
+    li{
+      @include listStyle;
+      padding: 1rem;
+      font-size: 2em;
+      border-radius: 10px;
+    }
+    li:hover{
+      background-color: white;
+      color: black;
+      cursor: pointer;
+      border: 1px black solid;
+    }
+  }
   &__nav {
     margin-top: 2rem;
     padding: 0;
@@ -28,8 +50,7 @@
     justify-content: space-evenly;
     list-style: none;
     &--link {
-      list-style: none;
-      text-decoration: none;
+      @include listStyle;
       color: $black;
       font-weight: bold;
       font-size: 1em;
@@ -61,6 +82,7 @@
       font-size: 1.5rem;
     }
   }
+ 
   &__icon {
     position: relative;
     font-size: 1.6em;
@@ -69,6 +91,7 @@
     cursor: pointer;
     color: $orange;
   }
+  
 }
 
 .logo {

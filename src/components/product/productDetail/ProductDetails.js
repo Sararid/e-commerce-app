@@ -6,7 +6,7 @@ import { useParams } from "react-router";
 import "./ProductDetails.scss";
 //store
 import { useDispatch } from "react-redux";
-import { addToCart, increment } from "../../../redux/features/cart/cartSlice";
+import { addToCart } from "../../../redux/features/cart/cartSlice";
 
 const ProductDetails = () => {
   const { productId } = useParams();
