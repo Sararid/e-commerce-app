@@ -15,7 +15,7 @@ export default function CartPage() {
     const cart = useSelector((state) => state.cart);
     console.log('cartpage', cart.cartItems)
     return (
-        <section style={{marginTop: "2rem"}} >
+        <section style={{ marginTop: "2rem" }} >
             <div className="cart__title">
                 <Link to="/shop">
                     <button className="cart__btn">

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BsPlusCircle } from "react-icons/bs";
 import { FiTrash } from "react-icons/fi";
 import { BiMinusCircle } from "react-icons/bi";
@@ -9,11 +9,10 @@ import {
   decrement,
   clear,
 } from "../../../redux/features/cart/cartSlice";
-
 export default function CartItem({ item }) {
-  const [savedItem, setSavedItem] = useState(false);
+
   const dispatch = useDispatch();
-//poner esta funcion de local storgae en una funciona pcada botton y luego getitem guardarlo en el estado que tego q crear 
+
   return (
     <>
       <div className="cart__container--card">
@@ -24,7 +23,7 @@ export default function CartItem({ item }) {
           className="cart__container--img"
         />
         <div className="cart__container--title">
-          {" "}
+
           <h3>€{item.price}</h3>
         </div>
         <div className="cart__container--qty">
@@ -33,7 +32,6 @@ export default function CartItem({ item }) {
             <button
               onClick={() => {
                 dispatch(increment(item));
-                localStorage.setItem("item", JSON.stringify(item));
               }}
             >
               <BsPlusCircle className="cart__container--icon" />
@@ -43,7 +41,6 @@ export default function CartItem({ item }) {
               <button
                 onClick={() => {
                   dispatch(clear(item));
-                  localStorage.setItem("item", JSON.stringify(item));
                 }}
               >
                 <FiTrash className="cart__container--icon" />
@@ -53,13 +50,13 @@ export default function CartItem({ item }) {
               <button
                 onClick={() => {
                   dispatch(decrement(item));
-                  localStorage.setItem("item", JSON.stringify(item));
                 }}
               >
-                <BiMinusCircle className="cart__container--icon" />{" "}
+                <BiMinusCircle className="cart__container--icon" />
               </button>
             )}
           </div>
+
         </div>
       </div>
     </>

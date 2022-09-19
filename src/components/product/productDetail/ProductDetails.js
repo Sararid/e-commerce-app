@@ -7,7 +7,6 @@ import "./ProductDetails.scss";
 //store
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../../redux/features/cart/cartSlice";
-
 const ProductDetails = () => {
   const { productId } = useParams();
   console.log(productId);
@@ -24,17 +23,13 @@ const ProductDetails = () => {
     setProduct(response.data);
   };
 
-  useEffect(() => {
-    if (productId && productId !== "") fetchProductDetails();
-  }, [productId]);
-
-//  //test localstorage 
-//   useEffect(() => {
-//     localStorage.setItem('product', JSON.stringify(product));
-//   }, [product]);
+  // useEffect(() => {
+  //   if (productId && productId !== "") fetchProductDetails();
+  // }, [productId]);
 
   //const { id, title, price, image, description } = product;
   console.log(product)
+ 
   return (
     <div className="productDetails">
       {product.length === 0 ? (

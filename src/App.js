@@ -23,13 +23,12 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="Shop" element={<Shop />} />
         <Route path="product/:productId" element={<ProductDetails />} />
         <Route path="cart" element={<Cart />} />
         <Route path="checkout" element={<Checkout />} />
         <Route path="shop" element={<Shop />} />
         <Route path="category/:category" element={<Category />} />
-        <Route path="payment-success" element={<PaymentSuccess />} />
+        <Route path="checkout/paymentSuccess" element={<PaymentSuccess />} />
 
       </Routes>
 

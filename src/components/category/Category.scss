@@ -1,3 +1,18 @@
+.parent{
+  padding-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media all and (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    &__checkout {
+      margin-top: 5rem;
+    }
+  }
+}
+
 .category {
   display: flex;
   flex-direction: column;

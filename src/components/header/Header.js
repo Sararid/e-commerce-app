@@ -26,26 +26,40 @@ export default function Header() {
           </div>
         </div>
         <div
-        className="header__toggleNav"
+          className="header__toggleNav"
           style={{
-           
             display: sideBar,
-           
           }}
         >
           <ul>
-            <li>home</li>
-            <li>Shop</li>
-            <li>home</li>
-            <li>Shop</li>
+            <Link to="/" onClick={handleCloseButton} className="header__list">
+              <li>home</li>
+            </Link>
+            <Link
+              to="shop"
+              onClick={handleCloseButton}
+              className="header__list"
+            >
+              <li>Shop</li>
+            </Link>
+            <Link to="/" onClick={handleCloseButton} className="header__list">
+              <li>home</li>
+            </Link>
+            <Link to="/" onClick={handleCloseButton} className="header__list">
+              <li>home</li>
+            </Link>
           </ul>
-          <div style={{ height: "30px", width: "90px" , fontWeight: "700", backgroundColor: 'pink'}} onClick={handleCloseButton}>
-            <AiOutlineClose height="0vh"/>
+          <div
+          className="header__closeButton"
+           
+            onClick={handleCloseButton}
+          >
+            <AiOutlineClose height="0vh" className="header__closeButton--icon" />
           </div>
         </div>
 
         <Link to="/">
-          <div>RANDA</div>
+          <div className="header__logo">RANDA</div>
         </Link>
         <div>
           <Cart />

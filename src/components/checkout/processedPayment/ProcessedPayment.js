@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './ProcessedPayment.scss'
-import { useEffect, useContext } from 'react';
+import { Link } from 'react-router-dom';
+//store
+import { useSelector, useDispatch } from 'react-redux';
+import { clear, clearCartAfterPayment } from '../../../redux/features/cart/cartSlice';
 export default function ProcessedPayment() {
-    // const { clearCart, cartItems } = useContext(CartContext);
-    // useEffect(() => {
-    //     if (cartItems.length !== 0) { clearCart() }
-    // }, [clearCart, cartItems]);
+    const cart = useSelector((state) => state.cart);
 
+    console.log(cart)
+    const dispatch = useDispatch()
+    useEffect(() => {
+        dispatch(clearCartAfterPayment(cart.cartItems))
+    }, [])
     return (
         <div className="processpay">
 
@@ -16,12 +21,15 @@ export default function ProcessedPayment() {
                 we will send you a confirmation email shortly...
             </p>
             <div>
-                {/* <button className="processpay__btn"
-                    onClick={() => history.push('/shop')}>
-                    Continue Shopping
-                </button> */}
+                <Link to="/">
+                    <button className="processpay__btn">
+
+
+                        Continue Shopping
+                    </button>
+                </Link>
             </div>
-        </div>
+        </div >
     )
 }
 

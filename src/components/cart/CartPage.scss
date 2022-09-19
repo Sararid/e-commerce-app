@@ -68,25 +68,7 @@ padding-right: 2rem;
         }
       }
     }
-    &--total {
-      @include flexColumnCenter;
-      align-content: space-between;
-      padding: 2rem 2rem;
-      @media all and (min-width: 991px) {
-        margin-right: 2rem;
-      }
-      p {
-        font-size: 1.3rem;
-        font-weight: bold;
-      }
-      button {
-        @include buttonStyle;
-        @media all and (min-width: 768px) {
-          font-size: 1.2rem;
-          width: 190px;
-        }
-      }
-    }
+   
     &--qty {
       @include flexColumnCenter;
 

@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+//style
+import '../../src/components/category/Category.scss'
+//component
 import ProductCard from "../components/product/productCard/ProductCard";
 function Category() {
   let { category } = useParams();
@@ -22,12 +25,7 @@ function Category() {
 
   return (
     <div
-      style={{
-        paddingTop: "5rem",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-      }}
+    className="parent"
     >
       {product.map((item) => {
         return <ProductCard item={item} />;

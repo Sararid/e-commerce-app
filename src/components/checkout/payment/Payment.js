@@ -4,7 +4,16 @@ import { BsFillCreditCard2BackFill } from "react-icons/bs";
 import { CgPaypal } from "react-icons/cg";
 import CountriesDropDown from "./CountriesDropDown";
 import { Link } from "react-router-dom";
-const Payment = ({ total }) => {
+//store
+import { useDispatch, useSelector } from "react-redux";
+import { clear } from "../../../redux/features/cart/cartSlice";
+
+const Payment = ({ total, item }) => {
+    const cart = useSelector((state) => state.cart.cartItems);
+
+    const dispatch = useDispatch();
+
+    console.log('total', cart)
     const [errorMessage, setErrorMessage] = useState("");
     const [errorCard, setErrorCard] = useState("");
     const [errorForm, setErrorForm] = useState("");
@@ -31,7 +40,6 @@ const Payment = ({ total }) => {
             setErrorCard("");
         }
         if (state.email && state.name && state.number && state.dates && state.cvc) {
-            // history.push("/payment-success"); 
             setCompletedForm(true)
         } else {
             setErrorForm("Please complete all fields before payment!");
@@ -160,7 +168,7 @@ const Payment = ({ total }) => {
                 <div className="containerPay__btn">
 
                     {completedForm === true ?
-                        <Link to='payment-sucess'> <button onClick={handleValidation}> {`Pay: €${total}`} </button></Link> :
+                        <Link to="paymentSuccess"> <button onClick={handleValidation}> {`Pay: €${total}`} </button></Link> :
                         <button onClick={handleValidation}> {`Pay: €${total}`} </button>}
                 </div>
             </div>
