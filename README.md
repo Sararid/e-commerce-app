@@ -5,26 +5,11 @@
 
 # Project
 
-The project consists of creating a simple payment gateway that allows the user to have a comfortable experience when making the payment. The project also contains a simple commerce website that allows the user to select a product and its quantity before proceeding to the payment gateway.
-
-![getway payment](https://github.com/Sararid/e-commerce-checkout/blob/main/src/gif/paymentget.gif)
+The project consists of creating a simple e-commerce website that allows the user to select a product and its quantity before proceeding to the payment gateway.
 
 ## Background
 
-This project is a practical exercise to participate in the JUMP2DIGITAL 2021 hackathon. With this exercise I have been able to reinforce my knowledge of front-end (HTML5 / CSS3 / SASS / MIXINS / BEM), JavaScript and ReactJS, and the use of external APIs.
-With this project I have also learned for the first time the use of **useContext** (similar to redux), React hook that allows me to create and share global variables with different components of my application.
-
-# Main objectives and user stories
-
-1. Layout skills
-
-2. Use of third-party Apis to fill in form fields
-
-- [x] Task 1 → I can see the PC view correctly.
-- [x] Task 2 → I can see the mobile view correctly.
-- [x] Task 3 → If I enter a field that does not correspond to a credit card pattern, an error occurs.
-- [x] Task 4 → If I enter an email that does not correspond to the email pattern, a warning error appears.
-- [x] Task 5 → I can choose to see the complete list of countries.
+With this exercise I have been able to reinforce my knowledge of front-end (HTML5 / CSS3 / SASS / MIXINS / BEM), ReactJS, Redux Toolkit and the use of external APIs.
 
 ## Stack
 
