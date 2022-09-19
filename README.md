@@ -1,7 +1,7 @@
 # Minimalistic e-commerce app
 # Code quality
 
-[![CodeFactor](https://www.codefactor.io/repository/github/sararid/e-commerce-checkout/badge)](https://www.codefactor.io/repository/github/sararid/e-commerce-checkout)
+[[![CodeFactor](https://www.codefactor.io/repository/github/sararid/e-commerce-app/badge)](https://www.codefactor.io/repository/github/sararid/e-commerce-app)
 
 # Project
 
