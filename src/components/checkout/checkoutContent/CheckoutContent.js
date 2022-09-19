@@ -10,7 +10,6 @@ export default function CheckoutContent() {
     <>
       <section className="container">
         <div className="container__checkout">
-
           <div className="checkout">
             <Link to="/cart">
               <button className="checkout__btn">Go back to cart</button>

@@ -9,8 +9,9 @@ import "./FeaturedProducts.scss";
 export default function FeaturedProducts() {
   const dispatch = useDispatch();
   const stateProducts = useSelector((state) => state.products.products);
-  const productList = stateProducts
-    .filter((i) => i < 4)
+
+  const featuredProducts = stateProducts
+    .filter((item, i) => i < 4)
     .map((item) => <ProductCard item={item} />);
 
   useEffect(() => {
@@ -20,7 +21,7 @@ export default function FeaturedProducts() {
     <section className="featuredCollection">
       <h1>Featured Collection</h1>
       <div style={{ display: "flex" }}>
-        <ul className="featuredCollection__list">{productList}</ul>
+        <ul className="featuredCollection__list">{featuredProducts}</ul>
       </div>
     </section>
   );

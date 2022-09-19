@@ -12,6 +12,7 @@ export default function ProductCard({ item }) {
   const isProductInCart = cart.cartItems.filter(
     (product) => product.id === item.id
   );
+  console.log('item', item)
   return (
     <>
       <li key={item.id} id={item.id} className="singleProduct">
@@ -20,7 +21,6 @@ export default function ProductCard({ item }) {
           alt={item.title}
           className="singleProduct__image"
         />
-
         <h1 className="singleProduct__title">{item.title}</h1>
         <span className="singleProduct__price">€ {item.price}</span>
 

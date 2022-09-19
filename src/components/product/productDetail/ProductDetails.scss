@@ -4,7 +4,9 @@
 .productDetails {
   display: flex;
   padding-top: 2rem;
+
   &__container {
+    margin: 5rem;
     @include flexColumnCenter;
     border: 1px solid #ccc;
     box-shadow: 1px 1px $GrayishBlue;
@@ -17,6 +19,7 @@
   }
   &__title {
     font-size: 1.2rem;
+    text-align: center;
   }
   &__description {
     font-size: 1.1rem;

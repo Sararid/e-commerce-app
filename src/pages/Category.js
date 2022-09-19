@@ -5,9 +5,9 @@ import axios from "axios";
 import "../../src/components/category/Category.scss";
 //component
 import ProductCard from "../components/product/productCard/ProductCard";
-function Category() {
+
+export default function Category() {
   let { category } = useParams();
-  console.log(category);
   const [product, setProduct] = useState([]);
 
   const fetchProductDetails = async () => {
@@ -30,6 +30,4 @@ function Category() {
       })}
     </div>
   );
-}
-
-export default Category;
+};

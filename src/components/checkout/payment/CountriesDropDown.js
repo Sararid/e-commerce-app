@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import api from "../../../services/api";
-import './Payment.scss'
+import "./Payment.scss";
 
 const CountriesDropDown = () => {
     const [data, setData] = useState([]);
@@ -8,7 +8,7 @@ const CountriesDropDown = () => {
         api().then((data) => {
             setData(data);
         });
-    }, []);
+    });
     const nameCountry = data.map((item, i) => {
         return <option key={i}>{item.name}</option>;
     });

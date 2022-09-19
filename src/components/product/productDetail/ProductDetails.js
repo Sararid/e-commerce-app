@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 //router
 import { useParams } from "react-router";
@@ -8,7 +8,7 @@ import "./ProductDetails.scss";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../../redux/features/cart/cartSlice";
 
-const ProductDetails = () => {
+export default function ProductDetails({ item }) {
   const { productId } = useParams();
   const dispatch = useDispatch();
   const [product, setProduct] = useState([]);
@@ -21,7 +21,10 @@ const ProductDetails = () => {
       });
     setProduct(response.data);
   };
-  console.log(product)
+  useEffect(() => {
+    fetchProductDetails()
+  })
+
   return (
     <div className="productDetails">
       {product.length !== 0 ? (
@@ -39,7 +42,7 @@ const ProductDetails = () => {
           <h1 className="productDetails__title">{product.title}</h1>
 
           <p className="productDetails__description"> {product.description}</p>
-          <span className="productDetails__price"> € {product.price}</span>
+          <span className="productDetails__price"> € {product.price.toFixed(2)}</span>
 
           <button
             className="productDetails__button"
@@ -63,4 +66,3 @@ const ProductDetails = () => {
     </div>
   );
 };
-export default ProductDetails;
