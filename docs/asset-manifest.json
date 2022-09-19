@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.89457187.css",
-    "main.js": "/static/js/main.7eaaeb31.js",
-    "static/media/model (3).jpg": "/static/media/model (3).3502297d27ae640bc6a2.jpg",
-    "static/media/hero.jpg": "/static/media/hero.42d46480dc31e3be7dac.jpg",
-    "index.html": "/index.html",
-    "main.89457187.css.map": "/static/css/main.89457187.css.map",
-    "main.7eaaeb31.js.map": "/static/js/main.7eaaeb31.js.map"
+    "main.css": "/Sararid/e-commerce-app/static/css/main.818c4df4.css",
+    "main.js": "/Sararid/e-commerce-app/static/js/main.fdd689b2.js",
+    "static/media/model (3).jpg": "/Sararid/e-commerce-app/static/media/model (3).3502297d27ae640bc6a2.jpg",
+    "static/media/hero.jpg": "/Sararid/e-commerce-app/static/media/hero.42d46480dc31e3be7dac.jpg",
+    "index.html": "/Sararid/e-commerce-app/index.html",
+    "main.818c4df4.css.map": "/Sararid/e-commerce-app/static/css/main.818c4df4.css.map",
+    "main.fdd689b2.js.map": "/Sararid/e-commerce-app/static/js/main.fdd689b2.js.map"
   },
   "entrypoints": [
-    "static/css/main.89457187.css",
-    "static/js/main.7eaaeb31.js"
+    "static/css/main.818c4df4.css",
+    "static/js/main.fdd689b2.js"
   ]
 }
