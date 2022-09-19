@@ -1,0 +1,16 @@
+@import "../../../utils/Mixins.scss";
+
+.processpay {
+  margin-top: 5rem;
+  background-color: "pink";
+  height: 50vh;
+  padding: 3rem;
+  @include flexColumnCenter;
+  justify-content: space-around;
+  text-align: center;
+  &__btn {
+    @include buttonStyle;
+    height: 70px;
+    width: 200px;
+  }
+}

@@ -1,0 +1,57 @@
+@import "../../../utils/Mixins.scss";
+@import "../../../utils/Variables.scss";
+
+.container {
+  margin-top: 5rem;
+  @media all and (min-width: 768px) {
+    display: flex;
+    justify-content: space-evenly;
+    &__checkout {
+      margin-top: 2rem;
+    }
+  }
+}
+.checkout {
+  @include flexColumnCenter;
+  &__btn {
+    @include buttonStyle;
+    @media all and (max-width: 767px) {
+      height: 50px;
+    }
+    @media all and (min-width: 768px) {
+      width: 300px;
+    }
+  }
+  &__summary {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 2rem;
+    text-align: center;
+    border: solid $GrayishBlue 1px;
+    border-radius: 10px;
+    background-color: $black;
+    color: white;
+    padding: 2rem;
+    @media all and (min-width: 768px) {
+      width: 100%;
+      padding: 3rem;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 1.3em;
+  }
+  &__subtitle {
+    margin: 0;
+    padding-top: 1rem;
+    text-transform: uppercase;
+    @media all and (min-width: 768px) {
+      padding-top: 1rem;
+    }
+
+    &--item {
+      font-weight: bold;
+    }
+  }
+}

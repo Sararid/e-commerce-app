@@ -1,22 +1,61 @@
 @import "../../utils/Mixins.scss";
 
 .header {
-  // margin: 2rem;
-  // height: 100px;
+  padding-bottom: 1.4rem;
   font-family: inherit;
-
+  &__logo {
+    font-size: 2em;
+    text-decoration: none;
+    color: black;
+    transition: 0.4s;
+  }
+  &__logo:hover {
+    cursor: pointer;
+    font-size: 2.3em;
+  }
   &__container {
     @include flexRowCenter;
     justify-content: space-around;
     position: fixed;
-    width: 100%;
+    width: 100vw;
     z-index: 1;
-    height: 50px;
+    height: 60px;
     background-color: white;
     opacity: 1;
+    padding: 1rem;
+    padding-top: 1.5rem;
     @media all and (min-width: 768px) {
       height: 100px;
     }
+  }
+  &__toggleNav {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    justify-content: space-between;
+    align-items: flex-start;
+    z-index: 9999;
+    background-color: black;
+    color: white;
+    padding: 2rem;
+    li {
+      @include listStyle;
+      padding: 1rem;
+      font-size: 2em;
+      border-radius: 10px;
+    }
+
+    li:hover {
+      background-color: white;
+      color: black;
+      cursor: pointer;
+      border: 1px black solid;
+    }
+  }
+  &__list {
+    @include listStyle;
+    color: white;
   }
   &__nav {
     margin-top: 2rem;
@@ -26,8 +65,7 @@
     justify-content: space-evenly;
     list-style: none;
     &--link {
-      list-style: none;
-      text-decoration: none;
+      @include listStyle;
       color: $black;
       font-weight: bold;
       font-size: 1em;
@@ -59,23 +97,28 @@
       font-size: 1.5rem;
     }
   }
+
   &__icon {
     position: relative;
-    font-size: 1.2em;
+    font-size: 1.6em;
   }
   &__icon:hover {
     cursor: pointer;
     color: $orange;
   }
-}
+  &__closeButton {
+    height: 30px;
+    width: 90px;
+    &--icon {
+      font-size: 1.6em;
 
-.logo {
-  //  @include flexColumnCenter;
-
-  &__img {
-    width: 100px;
-    @media all and (min-width: 768px) {
-      width: 250px;
+      transition: 0.5s;
+      border-radius: 10px;
+    }
+    &--icon:hover {
+      cursor: pointer;
+      color: $black;
+      background-color: #fff;
     }
   }
 }

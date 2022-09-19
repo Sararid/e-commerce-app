@@ -1,7 +1,23 @@
+.parent{
+  padding-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media all and (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    &__checkout {
+      margin-top: 5rem;
+    }
+  }
+}
+
 .category {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 2rem;
 }
 .categoryContainer {
   display: flex;
@@ -11,16 +27,20 @@
   &__item {
     margin: 10px;
     padding: 2px;
-    width: 150px;
-    height: 32px;
+    width: 180px;
+    height: 52px;
     border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.3);
-    text-align: center;
-    background-color: antiquewhite;
+  color: white;
+    background-color: black;
+    display:flex;
+    align-items: center;
+    justify-content: center;
   }
   &___item:hover {
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     cursor: pointer;
+    border: 1px black solid;
   }
 }

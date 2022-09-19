@@ -1,25 +1,19 @@
 
 const api = () => {
     return (
-        fetch('https://fakestoreapi.com/products')
+        fetch('https://restcountries.com/v3.1/all') //
             .then(response => response.json())
-            .then(response => {
 
+            .then(response => {
                 const result = response
 
                     .map(item => {
                         return {
-                            id: item.id,
-                            title: item.title,
-                            description: item.description,
-                            price: parseInt(item.price),
-                            image: item.image,
-                            category: item.category
+                            name: item.name.common
                         }
 
                     });
-                return result,
-                    console.log(result)
+                return (result);
             })
             .catch(error => { console.log('err', error) })
 

@@ -1,10 +1,10 @@
-@import "../../utils/Mixins.scss";
+@import "../../../utils/Mixins.scss";
 .singleProduct {
   border: 1px solid #ccc;
   box-shadow: 1px 1px $GrayishBlue;
   min-width: 18rem;
   padding: 1rem 0;
-
+  max-width: 322px;
   margin: 2.5rem;
   @include flexColumnCenter;
 
@@ -28,7 +28,7 @@
     width: 70%;
   }
   &__image {
-    // width: 200px;
+     max-width: 200px;
     height: 290px;
     @media all and (min-width: 423px) {
       width: 210px;
@@ -45,9 +45,6 @@
   }
   &__container {
     padding: 0;
-    // @include flexColumnWrap;
-    // align-items: center;
-    // justify-content: space-around;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -78,5 +75,11 @@
     @include buttonStyle;
     margin: 0.5rem 0;
     margin-right: 3px;
+  }
+  &__btn:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+border: 1px black solid;
   }
 }

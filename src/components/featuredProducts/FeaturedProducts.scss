@@ -2,12 +2,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  //flex-wrap: wrap;
-
   &__list {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
+    margin-top: 3rem;
   }
 }
