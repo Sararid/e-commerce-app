@@ -1,8 +1,9 @@
 # Minimalistic e-commerce app
 # Code quality
 
-[[![CodeFactor](https://www.codefactor.io/repository/github/sararid/e-commerce-app/badge)](https://www.codefactor.io/repository/github/sararid/e-commerce-app)
+[![CodeFactor](https://www.codefactor.io/repository/github/sararid/e-commerce-app/badge)](https://www.codefactor.io/repository/github/sararid/e-commerce-app)
 
+https://www.codefactor.io/repository/github/sararid/e-commerce-app/badge
 # Project
 
 The project consists of creating a simple e-commerce website that allows the user to select a product and its quantity before proceeding to the payment gateway.
