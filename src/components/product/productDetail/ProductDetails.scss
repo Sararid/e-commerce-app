@@ -36,4 +36,9 @@
     cursor: pointer;
     border: 1px black solid;
   }
+  &__loader {
+    margin: 2rem;
+    @include flexColumnCenter;
+    padding: 10rem;
+  }
 }

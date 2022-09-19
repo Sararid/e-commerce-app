@@ -29,14 +29,20 @@ const ProductDetails = () => {
 
   //const { id, title, price, image, description } = product;
   console.log(product)
- 
+
   return (
     <div className="productDetails">
       {product.length === 0 ? (
-        <div>...Loading</div>
+        <div className="productDetails__loader">
+          <div className="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <div>          <span>Loading page...</span>
+          </div>
+        </div>
       ) : (
 
-       <li key={product.id} id={product.id} className="productDetails__container">
+        <li key={product.id} id={product.id} className="productDetails__container">
           <img className="productDetails__image" src={product.image} alt={product.title} />
 
           <h1 className="productDetails__title">{product.title}</h1>
@@ -53,9 +59,9 @@ const ProductDetails = () => {
             Add to cart
           </button>
         </li>
-     )  
+      )
       }
-    </div>
+    </div >
   );
 };
 export default ProductDetails;
