@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { BsPlusCircle } from "react-icons/bs";
 import { FiTrash } from "react-icons/fi";
 import { BiMinusCircle } from "react-icons/bi";
@@ -10,7 +10,6 @@ import {
   clear,
 } from "../../../redux/features/cart/cartSlice";
 export default function CartItem({ item }) {
-
   const dispatch = useDispatch();
 
   return (
@@ -23,7 +22,6 @@ export default function CartItem({ item }) {
           className="cart__container--img"
         />
         <div className="cart__container--title">
-
           <h3>€{item.price}</h3>
         </div>
         <div className="cart__container--qty">
@@ -56,7 +54,6 @@ export default function CartItem({ item }) {
               </button>
             )}
           </div>
-
         </div>
       </div>
     </>

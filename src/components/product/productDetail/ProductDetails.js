@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 //router
 import { useParams } from "react-router";
@@ -7,11 +7,10 @@ import "./ProductDetails.scss";
 //store
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../../redux/features/cart/cartSlice";
+
 const ProductDetails = () => {
   const { productId } = useParams();
-  console.log(productId);
   const dispatch = useDispatch();
-
   const [product, setProduct] = useState([]);
 
   const fetchProductDetails = async () => {
@@ -22,28 +21,20 @@ const ProductDetails = () => {
       });
     setProduct(response.data);
   };
-
-  // useEffect(() => {
-  //   if (productId && productId !== "") fetchProductDetails();
-  // }, [productId]);
-
-  //const { id, title, price, image, description } = product;
   console.log(product)
-
   return (
     <div className="productDetails">
-      {product.length === 0 ? (
-        <div className="productDetails__loader">
-          <div className="spinner-border" role="status">
-            <span class="visually-hidden">Loading...</span>
-          </div>
-          <div>          <span>Loading page...</span>
-          </div>
-        </div>
-      ) : (
-
-        <li key={product.id} id={product.id} className="productDetails__container">
-          <img className="productDetails__image" src={product.image} alt={product.title} />
+      {product.length !== 0 ? (
+        <li
+          key={product.id}
+          id={product.id}
+          className="productDetails__container"
+        >
+          <img
+            className="productDetails__image"
+            src={product.image}
+            alt={product.title}
+          />
 
           <h1 className="productDetails__title">{product.title}</h1>
 
@@ -59,9 +50,17 @@ const ProductDetails = () => {
             Add to cart
           </button>
         </li>
-      )
-      }
-    </div >
+      ) : (
+        <div className="productDetails__loader">
+          <div className="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <div>
+            <span>Loading page...</span>
+          </div>
+        </div>
+      )}
+    </div>
   );
 };
 export default ProductDetails;

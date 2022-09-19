@@ -1,4 +1,5 @@
 @import "../../../utils/Mixins.scss";
+@import "../../../utils/Variables.scss";
 
 .productDetails {
   display: flex;
@@ -31,10 +32,10 @@
     @include buttonStyle;
   }
   &__button:hover {
-    background-color: white;
-    color: black;
+    background-color: $White;
+    color: $black;
     cursor: pointer;
-    border: 1px black solid;
+    border: 1px $black solid;
   }
   &__loader {
     margin: 2rem;

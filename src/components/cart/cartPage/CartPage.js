@@ -13,7 +13,6 @@ import CartTotal from "../cartTotal/CartTotal";
 
 export default function CartPage() {
     const cart = useSelector((state) => state.cart);
-    console.log('cartpage', cart.cartItems)
     return (
         <section style={{ marginTop: "2rem" }} >
             <div className="cart__title">

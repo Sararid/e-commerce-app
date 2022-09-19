@@ -1,4 +1,6 @@
-.parent{
+@import "../../utils/Variables.scss";
+
+.parent {
   padding-top: 5rem;
   display: flex;
   flex-direction: column;
@@ -31,16 +33,16 @@
     height: 52px;
     border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.3);
-  color: white;
-    background-color: black;
-    display:flex;
+    color: $White;
+    background-color: $black;
+    display: flex;
     align-items: center;
     justify-content: center;
   }
   &___item:hover {
-    background-color: white;
-    color: black;
+    background-color: $White;
+    color: $black;
     cursor: pointer;
-    border: 1px black solid;
+    border: 1px $black solid;
   }
 }

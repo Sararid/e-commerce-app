@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 //style
-import '../../src/components/category/Category.scss'
+import "../../src/components/category/Category.scss";
 //component
 import ProductCard from "../components/product/productCard/ProductCard";
 function Category() {
@@ -21,12 +21,10 @@ function Category() {
 
   useEffect(() => {
     if (category && category !== "") fetchProductDetails();
-  }, []);
+  });
 
   return (
-    <div
-    className="parent"
-    >
+    <div className="parent">
       {product.map((item) => {
         return <ProductCard item={item} />;
       })}

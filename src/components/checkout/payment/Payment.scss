@@ -40,7 +40,7 @@
       }
       a {
         text-decoration: none;
-        color: white;
+        color: $White;
       }
     }
   }
@@ -102,8 +102,8 @@ label {
     font-size: 2rem;
   }
   &__txt {
-    color: black;
-    background-color: white;
+    color: $black;
+    background-color: $White;
     text-align: center;
     width: 70%;
 

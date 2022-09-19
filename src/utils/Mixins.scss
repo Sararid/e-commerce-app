@@ -19,8 +19,8 @@
 
 @mixin buttonStyle {
   border: none;
-  color: white;
-  background-color: black;
+  color: $White;
+  background-color: $black;
   width: 150px;
   height: 40px;
   font-weight: bold;

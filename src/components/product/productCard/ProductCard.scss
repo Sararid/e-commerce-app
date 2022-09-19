@@ -1,4 +1,6 @@
 @import "../../../utils/Mixins.scss";
+@import "../../../utils/Variables.scss";
+
 .singleProduct {
   border: 1px solid #ccc;
   box-shadow: 1px 1px $GrayishBlue;
@@ -28,7 +30,7 @@
     width: 70%;
   }
   &__image {
-     max-width: 200px;
+    max-width: 200px;
     height: 290px;
     @media all and (min-width: 423px) {
       width: 210px;
@@ -77,9 +79,9 @@
     margin-right: 3px;
   }
   &__btn:hover {
-  background-color: white;
-  color: black;
-  cursor: pointer;
-border: 1px black solid;
+    background-color: $White;
+    color: $black;
+    cursor: pointer;
+    border: 1px $black solid;
   }
 }

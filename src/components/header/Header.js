@@ -33,7 +33,7 @@ export default function Header() {
         >
           <ul>
             <Link to="/" onClick={handleCloseButton} className="header__list">
-              <li>home</li>
+              <li>Home</li>
             </Link>
             <Link
               to="shop"
@@ -42,19 +42,12 @@ export default function Header() {
             >
               <li>Shop</li>
             </Link>
-            <Link to="/" onClick={handleCloseButton} className="header__list">
-              <li>home</li>
-            </Link>
-            <Link to="/" onClick={handleCloseButton} className="header__list">
-              <li>home</li>
-            </Link>
           </ul>
-          <div
-          className="header__closeButton"
-           
-            onClick={handleCloseButton}
-          >
-            <AiOutlineClose height="0vh" className="header__closeButton--icon" />
+          <div className="header__closeButton" onClick={handleCloseButton}>
+            <AiOutlineClose
+              height="0vh"
+              className="header__closeButton--icon"
+            />
           </div>
         </div>
 
