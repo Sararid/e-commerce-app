@@ -16,9 +16,10 @@ function App() {
   return (
     <>
       <Header />
-      <Home />
+
       <Routes>
-        <Route path="/" element={<Home />} />
+
+        <Route path="/e-commerce-app" element={<Header />} />
         <Route path="product/:productId" element={<ProductDetails />} />
         <Route path="cart" element={<Cart />} />
         <Route path="checkout" element={<Checkout />} />
